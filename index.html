@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samad Sabharwal | Student & Developer</title>
+    <meta
+      name="description"
+      content="The portfolio of Samad Sabharwal, a computer science student at Scaler School of Technology."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        background-color: #f8f9fa;  /* Light background */
+        color: #212529;             /* Dark text */
+        line-height: 1.7;
+      }
+
+      
+      .content-wrapper {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      
+      .page-header {
+        background-color: rgba(248, 249, 250, 0.8);  /* Light header background */
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        border-bottom: 1px solid #dee2e6;  /* Light border */
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .site-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #212529;  /* Dark text for logo */
+        text-decoration: none;
+      }
+      .site-logo span {
+        color: #0dcaf0;  /* Adjusted accent color */
+      }
+
+      .main-navigation ul {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+      }
+
+      .main-navigation a {
+        text-decoration: none;
+        color: #495057;  /* Darker gray for nav links */
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .main-navigation a:hover {
+        color: #0dcaf0;  /* Adjusted accent color */
+      }
+
+      
+      .hero-area {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 80px; 
+      }
+
+      .hero-intro p {
+        font-size: 1.1rem;
+        color: #0dcaf0;  /* Adjusted accent color */
+        font-weight: 600;
+      }
+
+      .hero-intro h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem); 
+        margin: 0.5rem 0;
+        color: #212529;  /* Dark text for heading */
+        letter-spacing: -1px;
+      }
+
+      .hero-intro h2 {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        color: #495057;  /* Darker gray for subheading */
+        font-weight: 400;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+      }
+
+      
+      .cta-button {
+        text-decoration: none;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin-top: 2rem;
+      }
+
+      .cta-button.primary {
+        background-color: #0dcaf0;  /* Adjusted accent color */
+        color: #212529;
+      }
+      .cta-button.primary:hover {
+        background-color: #0aa2c0;
+        transform: translateY(-2px);
+      }
+
+      
+      .page-section {
+        padding: 6rem 0;
+      }
+      .page-section:not(:first-child) {
+        border-top: 1px solid #dee2e6;  /* Light border */
+      }
+
+      .section-heading {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      .section-heading h2 {
+        font-size: 2.5rem;
+        color: #212529;  /* Dark text for heading */
+        margin-bottom: 0.5rem;
+      }
+      .section-heading p {
+        color: #495057;  /* Darker gray for paragraph */
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .about-text p {
+        color: #495057;  /* Darker gray for paragraph */
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+      .about-text strong {
+        color: #212529;  /* Dark text for strong */
+        font-weight: 600;
+      }
+
+      .about-visual {
+        height: 300px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0dcaf0, #0aa2c0);  /* Adjusted gradient colors */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 6rem;
+        color: rgba(248, 249, 250, 0.5);  /* Light color for emoji background */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      
+      .skills-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .skill-item {
+        background-color: #ffffff;  /* White background for skill item */
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid #dee2e6;  /* Light border */
+        transition: border-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .skill-item:hover {
+        transform: translateY(-5px);
+        border-color: #0dcaf0;  /* Adjusted accent color */
+      }
+
+      .skill-item-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1;
+        color: #0dcaf0;  /* Adjusted accent color */
+      }
+
+      .skill-item-name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #212529;  /* Dark text for skill name */
+      }
+
+      
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-tile {
+        background-color: #ffffff;  /* White background for project tile */
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #dee2e6;  /* Light border */
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .project-tile:hover {
+        transform: translateY(-5px);
+        border-color: #0dcaf0;  /* Adjusted accent color */
+      }
+
+      .project-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .project-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #212529;  /* Dark text for project title */
+      }
+
+      .project-description {
+        color: #495057;  /* Darker gray for paragraph */
+        flex-grow: 1;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .tech-tag {
+        background-color: #0aa2c0;
+        color: #ffffff;  /* White text for tech tag */
+        padding: 0.25rem 0.75rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .project-links a {
+        color: #0dcaf0;  /* Adjusted accent color */
+        text-decoration: none;
+        font-weight: 600;
+        margin-right: 1.5rem;
+        transition: color 0.3s ease;
+      }
+      .project-links a:hover {
+        color: #212529;  /* Dark text on hover */
+        text-decoration: underline;
+      }
+
+      
+      .contact-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact-content .email-link {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0dcaf0;  /* Adjusted accent color */
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 1rem;
+        transition: transform 0.3s ease;
+      }
+      .contact-content .email-link:hover {
+        transform: scale(1.05);
+        text-decoration: underline;
+      }
+
+      
+      .page-footer {
+        text-align: center;
+        padding: 3rem 0;
+        border-top: 1px solid #dee2e6;  /* Light border */
+        color: #6c757d;  /* Medium gray for footer */
+      }
+
+      .footer-social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-social-links a {
+        color: #6c757d;  /* Medium gray for footer links */
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      .footer-social-links a:hover {
+        color: #0dcaf0;  /* Adjusted accent color */
+        transform: translateY(-3px);
+      }
+
+      .footer-social-links a i {
+        font-size: 24px;
+      }
+
+      
+      @media (max-width: 768px) {
+        .main-navigation {
+          display: none; 
+        }
+
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-visual {
+          order: -1; 
+          height: 200px;
+          font-size: 4rem;
+          margin-bottom: 2rem;
+        }
+      }
+        .button1 {
+        margin-top: 1rem;
+      }
+
+      .button1 a {
+        display: inline-block;
+        background-color: #ffffff;  /* White background for button */
+        color: #0dcaf0;  /* Adjusted accent color */
+        padding: 0.6rem 1.2rem;
+        border: 1px solid #0dcaf0;  /* Adjusted accent color */
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .button1 a:hover {
+        background-color: #0dcaf0;  /* Adjusted accent color */
+        color: #ffffff;  /* White text on hover */
+        transform: translateY(-2px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="header-content content-wrapper">
+        <a href="#home" class="site-logo">Samad<span>.</span></a>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-area content-wrapper" id="home">
+        <div class="hero-intro">
+          <p>Hi, my name is</p>
+          <h1>Samad Sabharwal</h1>
+          <h2>
+            A Computer Science student at Scaler School of Technology,
+            passionate about building things for the web.
+          </h2>
+          <a href="#projects" class="cta-button primary">See My Work</a>
+        </div>
+      </section>
+
+      <section class="page-section" id="about">
+        <div class="content-wrapper">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <p>A brief introduction to who I am and what I do.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I am Samad Sabharwal, a B.Sc Computer Science student at
+                <strong>Scaler School of Technology</strong>. I am a beginner in
+                coding and currently learning the fundamentals of programming
+                and web development.
+              </p>
+              <p>
+                I enjoy exploring new technologies, solving simple coding
+                problems, and building small projects to improve my skills. My
+                goal is to keep learning step by step and grow into a skilled
+                software developer.
+              </p>
+            </div>
+            <div class="about-visual">👨‍💻</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="skills">
+        <div class="content-wrapper">
+          <div class="section-heading">
+            <h2>My Current Skillset</h2>
+            <p>
+              These are the technologies and tools I'm currently working with
+              and improving every day.
+            </p>
+          </div>
+
+          <div class="skills-showcase">
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skill-item-name">HTML5</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skill-item-name">CSS3</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="skill-item-name">Flexbox</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="skill-item-name">Responsive Design</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-solid fa-ruler"></i>
+              </div>
+              <div class="skill-item-name">CSS Units</div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-icon">
+                <i class="fa-solid fa-sitemap"></i>
+              </div>
+              <div class="skill-item-name">Semantic HTML</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="projects">
+        <div class="content-wrapper">
+          <div class="section-heading">
+            <h2>My Projects</h2>
+            <p>
+              Here are a few things I've been working on to practice my skills.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-tile">
+              <div class="project-content">
+                <h3 class="project-title">Personal Portfolio Website</h3>
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">Responsive Design</span>
+                </div>
+                <p class="project-description">
+                  A clean, responsive, and personal portfolio site (the one
+                  you're on now!) to showcase my skills and projects. Built from
+                  scratch with a focus on modern design and semantic HTML.
+                </p>
+                <div class="button1">
+                  <a href="index.html">Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tile">
+              <div class="project-content">
+                <h3 class="project-title">Simple Survey Form</h3>
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                </div>
+                <p class="project-description">
+                  A responsive and accessible survey form. This project
+                  demonstrates fundamental HTML form elements, including text
+                  inputs, radio buttons, and checkboxes, all styled with CSS.
+                </p>
+                <div class="button1">
+                  <a href="surveyform.html">Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tile">
+              <div class="project-content">
+                <h3 class="project-title">Visual Calculator</h3>
+                <div class="project-tech-stack">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">Grid Layout</span>
+                </div>
+                <p class="project-description">
+                  A sleek calculator interface designed with CSS Grid and flexbox. This project 
+                  focuses on creating a visually appealing calculator with button hover effects
+                  and responsive design principles.
+                </p>
+                <div class="button1">
+                  <a href="calculator.html">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="contact">
+        <div class="content-wrapper contact-content">
+          <div class="section-heading">
+            <h2>Get In Touch</h2>
+            <p>
+              I'm always open to new opportunities and collaborations. Feel free
+              to send me an email!
+            </p>
+          </div>
+          <a href="mailto:samad.25bcs10355@sst.scaler.com" class="email-link"
+            >samad.25bcs10355@sst.scaler.com</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-social-links">
+        <a href="#" target="_blank" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/samad-sabharwal-35aa4337a/"
+          target="_blank"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
